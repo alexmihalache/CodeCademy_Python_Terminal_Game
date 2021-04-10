@@ -49,7 +49,7 @@ class Battles(Royal):
 
         def __repr__(self):
             return self.battle_name + " " + str(self.teritory_in_scope) 
-        
+        """
         def remove_teritory(self, player_list):
             for i in range(len(player_list)):
                 for key, value in player_list[i].items():
@@ -60,7 +60,7 @@ class Battles(Royal):
                             print(player_list[i].teritories)
                         except:
                             return "Teritory not found"
-                    
+           """         
   
 def initialise_players():
     for i in range(len(houses)):
@@ -73,12 +73,6 @@ def initialise_battles():
         battles_list.append(Battles(battles[i]["Name"], battles[i]["Teritories in scope"]))
 
 initialise_battles()
-
-print(battles_list)
-
-battles_list[0].remove_teritory(player_list)
-
-print(battles_list)
 
 def initialise_user_player(name = input("What's your name? ")):
     initial = name[0].lower()
