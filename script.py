@@ -50,6 +50,8 @@ class Battles(Royal):
         def __repr__(self):
             return self.battle_name + " " + str(self.territory_in_scope) 
 
+        def remove_teritory(self, battle):
+            self.territories -= self.territory_in_scope
       
 def initialise_players():
     for i in range(len(houses)):
